@@ -4,26 +4,28 @@ public class SpacedLogger implements Logger {
 
 	@Override
 	public void log(String log) {
-		StringBuilder spaced = new StringBuilder();
-		for (int i = 0; i < log.length(); i++) {
-			spaced.append(log.charAt(i));
-			if (i < log.length() - 1) {
-				spaced.append(" ");
-			}
-		}
-		System.out.println(spaced);
+		spacedMethod(log);
 	}
 
 	@Override
 	public void error(String error) {
-		StringBuilder errorPrint = new StringBuilder();
-		for (int i = 0; i < error.length(); i++) {
-			errorPrint.append(error.charAt(i));
-			if (i < error.length() - 1) {
-				errorPrint.append(" ");
+		System.out.print("ERROR: "); 
+		spacedMethod(error);
+	}
+	
+	/**
+	 * Creates Spaces between characters in a String input
+	 * @param input String
+	 */
+	public void spacedMethod(String input) {
+		StringBuilder output = new StringBuilder();
+		for (int i = 0; i < input.length(); i++) {
+			output.append(input.charAt(i));
+			if (i < input.length() - 1) {
+				output.append(" ");
 			}
 		}
-		System.out.println("ERROR: " + errorPrint);
+		System.out.println(output);
 	}
 
 } // End SpacedLogger Class
