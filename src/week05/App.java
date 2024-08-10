@@ -15,7 +15,7 @@ public class App {
 		System.out.println("First Test: ");
 		System.out.println("- - - - - - - - - - - - \n");
 		
-		//
+		// Here I will invoke the methods to test for what the Assignment Calls for:
 		loggerAsterisk.log("Hello");
 		System.out.println();
 
